@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "emulator-5554",
         "name": "com.GAME2014_Lab2.GeorgeBrown",
-        "processId": 3981,
+        "processId": 3211,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,12 @@
             "deviceId": "emulator-5554",
             "name": "com.GAME2014_Lab2.GeorgeBrown",
             "processId": 3981,
+            "exited": false
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.GAME2014_Lab2.GeorgeBrown",
+            "processId": 3211,
             "exited": false
         }
     ],
