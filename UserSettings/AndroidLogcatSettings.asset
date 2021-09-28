@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "emulator-5554",
     "m_SelectedPackage": {
-        "deviceId": "emulator-5554",
-        "name": "com.GAME2014_Lab2.GeorgeBrown",
-        "processId": 3211,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,25 +11,37 @@
         {
             "deviceId": "emulator-5554",
             "name": "ca.georgebrown.game2014.f2021.lab1b",
-            "processId": 5410,
-            "exited": false
-        },
-        {
-            "deviceId": "emulator-5554",
-            "name": "ca.georgebrown.game2014.f2021.lab1b",
             "processId": 5704,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "emulator-5554",
             "name": "com.GAME2014_Lab2.GeorgeBrown",
             "processId": 3981,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "emulator-5554",
             "name": "com.GAME2014_Lab2.GeorgeBrown",
             "processId": 3211,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.GAME2014_Lab2.GeorgeBrown",
+            "processId": 2937,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "ca.GeorgeBrown.GAME2014_Lab2",
+            "processId": 3302,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.ldmnq.launcher3",
+            "processId": 1932,
             "exited": false
         }
     ],

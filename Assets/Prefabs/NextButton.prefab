@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 493191242748389416}
   m_Layer: 5
   m_Name: NextButton
-  m_TagString: Start
+  m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 493191242748389416}
         m_TargetAssemblyTypeName: SceneChangeButton, Assembly-CSharp
-        m_MethodName: LoadpreviousScene
+        m_MethodName: LoadNextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

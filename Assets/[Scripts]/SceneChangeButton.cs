@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneChangeButton : MonoBehaviour
 {
-
    public void OnButtonPressed()
     {
         SceneManager.LoadScene(tag);
@@ -36,4 +35,5 @@ public class SceneChangeButton : MonoBehaviour
             Debug.Log("Cannot load next scene. this is the last one");
         }
     }
+
 }
