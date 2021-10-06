@@ -9,12 +9,13 @@ public class BulletBehaviour : MonoBehaviour
    public float speed;
     public Bounds bulletBounds;
 
+    private BulletManager bulletManager;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        bulletManager = FindObjectOfType<BulletManager>();
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class BulletBehaviour : MonoBehaviour
     {
         if(transform.position.y < bulletBounds.max)
         {
-            Destroy(this.gameObject);
+            bulletManager.returnBullet(this.gameObject);
         }
     }
 }
