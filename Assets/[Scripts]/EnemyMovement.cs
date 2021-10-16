@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour
 
     [Header("Bullets")]
     public Transform bulletSpawn;
-    private BulletManager bulletManager;
+    private EnemyBulletManager bulletManager;
 
     public int frameDelay;
 
@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
     {
         randomSpeed = Random.RandomRange(movementBounds.min, movementBounds.max);
         startingPoint = Random.RandomRange(startRange.min, startRange.max);
-        bulletManager = FindObjectOfType<BulletManager>();
+        bulletManager = FindObjectOfType<EnemyBulletManager>();
     }
 
     // Update is called once per frame

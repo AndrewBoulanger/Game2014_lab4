@@ -12,6 +12,14 @@ public class PlayerBehaviour : MonoBehaviour
     public float decay;
     public Bounds bounds;
 
+    [SerializeField]
+    float frameDelay;
+
+    [SerializeField]
+    PlayerBulletManager bulletManager;
+    [SerializeField]
+    Transform bulletSpawner;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +33,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         Move();
         CheckBounds();
+        CheckFire();
     }
 
     private void Move()
@@ -48,4 +57,13 @@ public class PlayerBehaviour : MonoBehaviour
             transform.position = new Vector2(bounds.max, transform.position.y);
         }
     }
+
+    private void CheckFire()
+    {
+        if(Input.GetAxisRaw("Jump") > 0 && Time.frameCount % frameDelay == 0)
+        {
+            bulletManager.ActivateBullet(bulletSpawner.position);
+        }
+    }
+
 }

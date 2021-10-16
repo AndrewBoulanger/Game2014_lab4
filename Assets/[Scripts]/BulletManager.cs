@@ -5,44 +5,32 @@ using UnityEngine;
 [System.Serializable]
 public class BulletManager : MonoBehaviour
 {
-
-    public Queue<GameObject> bulletPool;
-    public int maxBulletNumber;
+    public  Queue<GameObject> bulletPool; 
+    public int bulletCount ;
     public int minBulletNumber = 5;
 
-    private BulletFactory factory;
+    protected BulletFactory factory;
 
     // Start is called before the first frame update
     void Start()
     {
         bulletPool = new Queue<GameObject>();
+    
         factory = GetComponent<BulletFactory>();
-
-        BuildBulletPool();
     }
 
-    private void BuildBulletPool()
+    protected virtual void AddBulletToPool()
     {
-        for(int i = 0; i < maxBulletNumber; i++ )
-        {
-            AddBulletToPool();
-        }
+
     }
 
-    private void AddBulletToPool()
-    {
-        GameObject temp_Bullet = factory.CreateBullet(); 
-        bulletPool.Enqueue(temp_Bullet);
-    }
-
-    public GameObject ActivateBullet(Vector2 spawnPosition)
+    public virtual GameObject ActivateBullet(Vector2 spawnPosition)
     {
         if(bulletPool.Count < minBulletNumber)
         {
             for(int i = 0; i < minBulletNumber; i++)
             { 
                 AddBulletToPool();
-                maxBulletNumber++;
             }
         }
 

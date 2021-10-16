@@ -509,6 +509,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1547837849}
+  - component: {fileID: 1547837850}
+  - component: {fileID: 1547837851}
   - component: {fileID: 1547837848}
   m_Layer: 0
   m_Name: GameController
@@ -526,11 +528,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1547837847}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcb2466fca0508a41be820014c8da031, type: 3}
+  m_Script: {fileID: 11500000, guid: ad2840026d304eb4e88efdcd15daaf3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7237599712546466896, guid: 05bab665d566d454bb8e65325e822100, type: 3}
-  maxBulletNumber: 70
+  bulletCount: 0
   minBulletNumber: 5
 --- !u!4 &1547837849
 Transform:
@@ -546,6 +547,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1547837850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547837847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74a9239236b98464cb4bc5542ff5753b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletTypes:
+  - {fileID: 7237599712546466896, guid: 05bab665d566d454bb8e65325e822100, type: 3}
+  - {fileID: 7237599712546466896, guid: fdbd7a31f541e6148b514381de46758b, type: 3}
+--- !u!114 &1547837851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1547837847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd9c280f1427804792be7e60282371a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletCount: 0
+  minBulletNumber: 5
 --- !u!1001 &1765544912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -671,6 +701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6829548573781238711, guid: 4c0efaf7ee4cf9d4e8e1ed24d3a7db32, type: 3}
+      propertyPath: bulletManager
+      value: 
+      objectReference: {fileID: 1547837851}
     - target: {fileID: 6829548573781238713, guid: 4c0efaf7ee4cf9d4e8e1ed24d3a7db32, type: 3}
       propertyPath: m_RootOrder
       value: 4

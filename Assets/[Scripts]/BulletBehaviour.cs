@@ -11,15 +11,13 @@ public class BulletBehaviour : MonoBehaviour
 
     public BulletDirection direction;
 
-    private BulletManager bulletManager;
+    public BulletManager bulletManager;
     
     private Vector3 velocity;
 
     // Start is called before the first frame update
     void Start()
     {
-        bulletManager = FindObjectOfType<BulletManager>();
-
         switch(direction)
         {
             case BulletDirection.UP:

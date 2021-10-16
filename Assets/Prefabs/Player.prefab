@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8146805547911078367}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: bulletSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,6 +134,9 @@ MonoBehaviour:
   bounds:
     min: -1.9
     max: 1.9
+  frameDelay: 5
+  bulletManager: {fileID: 0}
+  bulletSpawner: {fileID: 8146805547911078367}
 --- !u!50 &6829548573781238708
 Rigidbody2D:
   serializedVersion: 4

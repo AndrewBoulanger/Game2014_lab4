@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public enum BulletType
 {
-    ENEMY, PLAYER
+    ENEMY, PLAYER, 
+    END
 }
 
 [System.Serializable]
@@ -15,11 +16,13 @@ public class BulletFactory : MonoBehaviour
    
   
     [Header("Bullet Types")]
-    [Tooltip("order:\n enemy\n player")]
     public List<GameObject> bulletTypes = new List<GameObject>();
 
     public GameObject CreateBullet(BulletType type = BulletType.ENEMY)
     {
+        if(bulletTypes == null)
+            bulletTypes = new List<GameObject>();
+
         GameObject temp_bullet = null;
         temp_bullet = Instantiate(bulletTypes[(int)type]);
 
